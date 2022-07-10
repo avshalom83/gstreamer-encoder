@@ -2,17 +2,16 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([gstreamer-camera-interface], [0.0.1])
-AC_CONFIG_SRCDIR([src/CameraGstreamer.cpp])
+AC_INIT([gstreamer-encoder-interface], [0.0.1])
 AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([foreign])
 LT_INIT([disable-static])
 
 AC_ARG_WITH(
-    [camera-interface],
+    [encoder-interface],
     AC_HELP_STRING(
-        [--with-camera-interface=DIR],
-        [Directory where camera-interface.h can be found]
+        [--with-encoder-interface=DIR],
+        [Directory where encoder-interface.h can be found]
     ),
     [CPPFLAGS="$CPPFLAGS -I$withval"]
 )
@@ -26,13 +25,12 @@ PKG_CHECK_MODULES([GSAPP], [gstreamer-app-1.0])
 AC_PROG_CXX
 AC_LANG(C++)
 
-# Checks for libraries.
 # Checks for header files.
-AC_CHECK_HEADER(
-    [camera-interface.h],
-    [],
-    [AC_ERROR([Could not find camera-interface.h. Try specifying location using --with-camera-interface=path])]
-)
+#AC_CHECK_HEADER(
+#    [encoder-interface.h],
+#    [],
+#    [AC_ERROR([Could not find encoder-interface.h. Try specifying location using --with-encoder-interface=path])]
+#)
 
 # Checks for typedefs, structures, and compiler characteristics.
 
