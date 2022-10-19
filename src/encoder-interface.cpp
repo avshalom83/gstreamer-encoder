@@ -181,7 +181,8 @@ bool duInitEncoder(CUcontext cudaContext,
 }
 
 void duSetBitrateBytesPerFrame(unsigned bytesPerFrame) {
-     std::cout<<"duSetBitrateBytesPerFrame: "<< bytesPerFrame << std::endl;
+    return;
+    // std::cout<<"duSetBitrateBytesPerFrame: "<< bytesPerFrame << std::endl;
 }
 
 void duSetSize( unsigned width, unsigned height) {
