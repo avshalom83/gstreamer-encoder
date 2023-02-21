@@ -138,7 +138,8 @@ bool duInitEncoder(CUcontext cudaContext,
                 unsigned width,
                 unsigned height,
                 EncoderApi::FrameRateFraction frameRate,
-                EncoderApi::Codec codec )
+                EncoderApi::Codec codec,
+                unsigned numberOfSlices = ENCODER_NO_SLICES)
 {
     assert(_currentPipelineElement == nullptr);
     GError *e = NULL;
