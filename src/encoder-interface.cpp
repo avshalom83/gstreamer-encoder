@@ -196,7 +196,7 @@ void duExpireOlderFrames(uint64_t timestamp) {
      std::cout<<"duExpireOlderFrames: "<< timestamp << std::endl;
 }
 
-void duPutFrame(EncoderApi::DriveUVideoDeviceBuffer *frame,
+void duPutFrame(EncoderApi::DriveUVideoDeviceBufferPtr frame,
                 uint64_t timestamp) {
     GstElement *appsrc = gst_bin_get_by_name( GST_BIN(_currentPipelineElement), "appsrc" );
 
