@@ -15,7 +15,16 @@ AC_ARG_WITH(
     ),
     [CPPFLAGS="$CPPFLAGS -I$withval"]
 )
-
+AC_ARG_WITH(
+    [nvenc-dir],
+    AC_HELP_STRING(
+        [--with-nvenc-dir=DIR],
+        [Directory of Nvidia]
+    ),
+    [
+        CPPFLAGS="$CPPFLAGS -I$withval"
+    ]
+)
 PKG_CHECK_MODULES([GS], [gstreamer-1.0])
 PKG_CHECK_MODULES([GSBASE], [gstreamer-base-1.0])
 PKG_CHECK_MODULES([GSVIDEO], [gstreamer-video-1.0])
